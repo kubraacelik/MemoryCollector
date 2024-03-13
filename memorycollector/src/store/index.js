@@ -1,8 +1,8 @@
-//? tüm api'lerin implemente edildiği kısım
-
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { usersApi } from "./apis/usersApi";
+
+//? TÜM API'LERIN IMPLEMENTE EDİLDİĞİ KISIM
 
 export const store = configureStore({
   // reducer'lere path ile ulaşıyorum
@@ -15,6 +15,7 @@ export const store = configureStore({
   },
 });
 
+//setupListeners ile bunu kullanıyoruz
 setupListeners(store.dispatch);
 
 // ekleme, silme ve çekme işlemlerini dışarıya açtım
