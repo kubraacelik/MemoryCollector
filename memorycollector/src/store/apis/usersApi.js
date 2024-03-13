@@ -1,17 +1,23 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { faker } from "@faker-js/faker";
 
-// her isteğin belirli bir süre sürmesi için
+//? KİŞİLERLE İLGİLİ İŞLEMLER İÇİN BU API KULLANILDI
+
+// her isteğin belirli bir süre sonra yapılması için
 const pause = (duration) => {
   return new Promise((resolve) => {
     setTimeout(resolve, duration);
   });
 };
 
-// reducerPath:index.js'ten ona hangi isimle ulaşaçağımı belirtir
-// baseQuery:nereye istek atacağımı belirtir
+// reducerPath:index.js'ten ona hangi isimle ulaşac ağımı belirtir
+
+// baseQuery:nereye istek atacağımı belirtir. bu kısımda backend ile uğraşmamak için json-server kurduk.
+// çalıştırmak için terminale (json-server --watch db.json) yazdık. gelen adresi baseUrl'in karşısına yazdık
+
 // endpoints:data çekme, ekleme, kişileri kaldırma gibi işlemleri burada yaparız
-// fetchFn:1sn arayla tüm istekleri atacak
+
+// fetchFn:1 sn arayla tüm istekleri atacak
 const usersApi = createApi({
   reducerPath: "users",
   baseQuery: fetchBaseQuery({
@@ -24,20 +30,22 @@ const usersApi = createApi({
   endpoints(builder) {
     return {
       // fetchUsers: kişileri çekme işlemini yapacağız
-      //  builder.query: data'yı çekmek için kullanılır
+      // builder.query: data'yı çekmek için kullanılır
+      // providesTags: ben data çekme işlemi yaparken tag işlemi yapıyor. yani ekle butonuna basınca otomatik ekranda gösterecek
       fetchUsers: builder.query({
         providesTags: ["User"],
         query: () => {
           return {
             // url : nereye istek atacağımı gösterir(db.json'daki ismini aldık)
-            // veri çekeceğim için GET metodunu kullandık
+            // veri çekeceğimiz  için GET metodunu kullandık
             url: "/users",
             method: "GET",
           };
         },
       }),
       // addUser: kişi ekleme işlemini yapacağız
-      //  builder.mutation: data'yı update etmek için kullanılır
+      // builder.mutation: data'yı update etmek için kullanılır
+      // invalidatesTags: User tag'ını iptal et üstte yeniden çekme işlemi(providesTags) yapılsın
       addUser: builder.mutation({
         invalidatesTags: () => {
           return [{ type: "User" }];
@@ -55,7 +63,7 @@ const usersApi = createApi({
         },
       }),
       // removeUser: kişi silme işlemini yapacağız
-      //   silme işlemi yapacağım için parametre olarak bir user bilgisi almam lazım
+      // silme işlemi yapacağım için parametre olarak bir user bilgisi almam lazım
       removeUser: builder.mutation({
         invalidatesTags: () => {
           return [{ type: "User" }];
@@ -72,6 +80,6 @@ const usersApi = createApi({
   },
 });
 
-export const { useFetchUsersQuery, useAddUserMutation, useRemoveUserMutation } =
-  usersApi;
+//dışarıya açtık
+export const { useFetchUsersQuery, useAddUserMutation, useRemoveUserMutation } = usersApi;
 export { usersApi };
