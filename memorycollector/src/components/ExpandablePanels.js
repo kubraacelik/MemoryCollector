@@ -3,6 +3,8 @@ import { GoChevronDown } from "react-icons/go";
 import { GoChevronLeft } from "react-icons/go";
 import { useState } from "react";
 
+//? KİŞİLERİN YER ALDĞI HER BİR PANEL
+
 function ExpandablePanels({ children, header }) {
   const [expanded, setExpanded] = useState(false);
 
