@@ -30,7 +30,7 @@ export {
   useAddUserMutation,
   useFetchUsersQuery,
   useRemoveUserMutation,
-} from "./apis/usersApi";
+} from "./apis/usersApi"; 
 
 export {
   useFetchAlbumsQuery,
