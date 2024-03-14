@@ -32,7 +32,7 @@ export default function AlbumListItem({ album }) {
   return (
     <div>
       <ExpandablePanels header={header}>
-        <PhotoList album={album} />
+        <PhotoList album={album} /> 
       </ExpandablePanels>
     </div>
   );
