@@ -53,7 +53,7 @@ export default function PhotoList({ album }) {
             {results.isLoading ? (
               <CircularProgress />
             ) : (
-              <span>Fotoğraf Ekle+</span>
+              <span>Fotoğraf Ekle+</span> 
             )}
           </Button>
         </div>
