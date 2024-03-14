@@ -25,7 +25,7 @@ export default function UserListItem({ user }) {
           <GoTrash />
         )}
       </button>
-      {user.name}
+      <div style={{fontSize:'22px'}}>{user.name}</div>
     </>
   );
 
