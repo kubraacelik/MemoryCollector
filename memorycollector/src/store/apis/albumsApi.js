@@ -18,7 +18,7 @@ const pause = (duration) => {
 // endpoints:data çekme, ekleme, kişileri kaldırma gibi işlemleri burada yaparız
 
 // fetchFn:1 sn arayla tüm istekleri atacak
-const albumsApi = createApi({
+const albumsApi = createApi({ 
   reducerPath: "albums",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3000",
