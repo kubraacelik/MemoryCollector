@@ -10,7 +10,7 @@ const pause = (duration) => {
   });
 };
 
-// reducerPath:index.js'ten ona hangi isimle ulaşac ağımı belirtir
+// reducerPath:index.js'ten ona hangi isimle ulaşacağımı belirtir
 
 // baseQuery:nereye istek atacağımı belirtir. bu kısımda backend ile uğraşmamak için json-server kurduk.
 // çalıştırmak için terminale (json-server --watch db.json) yazdık. gelen adresi baseUrl'in karşısına yazdık

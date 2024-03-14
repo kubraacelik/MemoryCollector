@@ -26,7 +26,7 @@ export default function UserList() {
     );
     //hata varsa
   } else if (isError) {
-    content = <div style={{fontSize:'20px', color:'red'}}>Hata Var</div>;
+    content = <div style={{fontSize:'50px', textAlign:'center', fontWeight:'500' ,color:'red'}}>HATA VAR</div>;
   } 
   //hata yok ve data geliyorsa
   else {

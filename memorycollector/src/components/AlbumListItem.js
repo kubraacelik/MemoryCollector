@@ -1,16 +1,16 @@
 import React from "react";
-import ExpandablePanels from "./ExpandablePanels";
-import AlbumList from "./AlbumList";
-import { GoTrash } from "react-icons/go";
-import { useRemoveUserMutation } from "../store/apis/usersApi";
 import { CircularProgress } from "@mui/material";
+import { GoTrash } from "react-icons/go";
+import { useRemoveAlbumMutation } from "../store";
+import ExpandablePanels from "./ExpandablePanels";
+import PhotoList from "./PhotoList";
 
-export default function UserListItem({ user }) {
-  const [removeUser, results] = useRemoveUserMutation();
+export default function AlbumListItem({ album }) {
+  const [removeAlbum, results] = useRemoveAlbumMutation();
 
-  //silme işlemi zaten usersApi'de tanımlanmıştı. Kolayca alıp burada tanımladık.
+  //silme işlemi zaten albumsApi'de tanımlanmıştı. Kolayca alıp burada tanımladık.
   const handleClick = () => {
-    removeUser(user);
+    removeAlbum(album);
   };
 
   const header = (
@@ -25,14 +25,14 @@ export default function UserListItem({ user }) {
           <GoTrash />
         )}
       </button>
-      {user.name}
+      {album.title}
     </>
   );
 
   return (
     <div>
       <ExpandablePanels header={header}>
-        <AlbumList user={user} />
+        <PhotoList album={album} />
       </ExpandablePanels>
     </div>
   );

@@ -11,10 +11,35 @@
     {
       "id": "a545",
       "name": "Nichole Walter"
+    }
+  ],
+  "albums": [
+    {
+      "userId": 1,
+      "title": "Paris",
+      "id": 10
     },
     {
-      "id": "ea4c",
-      "name": "Dana King"
+      "id": "2d33",
+      "userId": "1",
+      "title": "Gorgeous Granite Ball"
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=20625",
+      "id": 1
+    },
+    {
+      "id": "dce2",
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=4855952960389120"
+    },
+    {
+      "id": "1b44",
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=7710573384957952"
     }
   ]
 }
