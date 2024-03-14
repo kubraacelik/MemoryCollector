@@ -2,6 +2,7 @@ import React from "react";
 import { useFetchUsersQuery, useAddUserMutation } from "../store";
 import UserListItem from "./UserListItem";
 import { Skeleton, Button, CircularProgress } from "@mui/material";
+import { CiUser } from "react-icons/ci";
 
 //? KİŞİLERİ LİSTELEMEK İÇİN
 
@@ -38,7 +39,10 @@ export default function UserList() {
   return (
     <div>
       <div className="topArrangement">
-        <h1 style={{ fontSize: "40px" }}>Kişiler</h1>
+        <div className="userdiv">
+        <h1 style={{ fontSize: "50px", color:'#4D5656', marginRight:'10px' }}>Kişiler</h1>
+        <CiUser style={{fontSize:'50px'}} />
+        </div>
         <Button variant="outlined" onClick={handleUserAdd}>
           {results.isLoading ? <CircularProgress /> : <span>Kişi Ekle+</span>}
         </Button>
