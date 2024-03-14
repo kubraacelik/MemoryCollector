@@ -16,7 +16,7 @@ function ExpandablePanels({ children, header }) {
   return (
     <div className="panelDiv">
       <div className="topArrangement">
-        <div className="topArrangement">{header}</div>
+        <div className="topArrangement">{header}</div> 
         <div onClick={handleClick} value={expanded}>
           {expanded ? (
             <GoChevronDown style={{ cursor: "pointer" }} />
