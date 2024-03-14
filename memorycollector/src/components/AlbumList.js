@@ -38,7 +38,7 @@ export default function AlbumList({ user }) {
     <>
       <div>
         <div className="topArrangement">
-          <h3>{user.name} Albümü</h3>
+          <h3 style={{fontSize:'20px'}}>{user.name} Albümü</h3>
           <Button variant="outlined" onClick={handleAlbumAdd}>
             {results.isLoading ? (
               <CircularProgress />
