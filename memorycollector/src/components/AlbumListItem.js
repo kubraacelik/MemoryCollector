@@ -25,7 +25,7 @@ export default function AlbumListItem({ album }) {
           <GoTrash />
         )}
       </button>
-      {album.title}
+      <div style={{fontSize:'19px'}}>{album.title}</div>
     </>
   );
 
