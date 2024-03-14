@@ -11,7 +11,7 @@ export default function AlbumList({ user }) {
   const [addAlbum, results] = useAddAlbumMutation();
 
   const handleAlbumAdd = () => {
-    addAlbum(user);
+    addAlbum(user); 
   };
 
   // content benim sayfamdaki görüntü
