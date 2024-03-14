@@ -23,7 +23,7 @@ export default function PhotoListItem({ photo }) {
         {results.isLoading ? (
           <CircularProgress style={{ width: "30px", height: "30px" }} />
         ) : (
-          <GoTrash />
+          <GoTrash /> 
         )}
       </div>
     </div>
