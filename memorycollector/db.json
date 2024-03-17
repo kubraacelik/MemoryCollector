@@ -3,6 +3,10 @@
     {
       "id": "4784",
       "name": "Mitchell Kuvalis"
+    },
+    {
+      "id": "b5b6",
+      "name": "Marvin Wintheiser"
     }
   ],
   "albums": [
@@ -60,6 +64,16 @@
       "id": "1772",
       "userId": null,
       "title": "Luxurious Bronze Bacon"
+    },
+    {
+      "id": "3315",
+      "userId": "b5b6",
+      "title": "Gorgeous Wooden Chair"
+    },
+    {
+      "id": "c885",
+      "userId": "b5b6",
+      "title": "Generic Bronze Towels"
     }
   ],
   "photos": [
@@ -217,6 +231,21 @@
       "id": "c1f1",
       "albumId": "3ce8",
       "url": "https://loremflickr.com/200/200/abstract?lock=3905563064795136"
+    },
+    {
+      "id": "a2d1",
+      "albumId": "3315",
+      "url": "https://loremflickr.com/200/200/abstract?lock=669522379931648"
+    },
+    {
+      "id": "11b6",
+      "albumId": "3315",
+      "url": "https://loremflickr.com/200/200/abstract?lock=6731582563942400"
+    },
+    {
+      "id": "1a6a",
+      "albumId": "c885",
+      "url": "https://loremflickr.com/200/200/abstract?lock=7528034500345856"
     }
   ]
 }
